@@ -158,13 +158,247 @@ main{
 
 }
 
-@media screen and (min-width: 576px) {
-    .table {
+
+/* Version escritorio*/
+
+
+@media (min-width: 992px)  {
+    
+   
+   
+    .grid_container{
+        
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 200px auto;
+        grid-template-rows: 50px calc(100vh - 10px) 10px;
+        grid-template-areas: 
+        "header nav"
+        "header main"
+        "header main"
+        "footer main";
+    
+
+         }
+
+    .grid_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+
+        }
+    
+
+    .box, .box_992px, .box_tableview{
+        height: 400px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        border: solid 1px whitesmoke;
+        box-shadow:   
+            3px 3px whitesmoke,
+            2px 2px rgb(211, 208, 208);
+        
+    
+        }
+    
+    .box .imagen, .box_992px .imagen, .box_tableview .imagen{         
+        height: 40%;
+        width: 90%;
+        border: solid 1px black;
+        border-style: hidden;
+        
+        }
+    
+    .box .imagen img, .box_992px .imagen img, .box_tableview .imagen img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;     
+        
+        }
+    
+    .box .description, .box_992px .description, .box_tableview  .description{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 40%;
+        width: 100%;
+       
+        }
+    
+    .box .boton, .box_992px .boton, .box_tableview .boton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20%;
+        width: 50%;
+        background-color: whitesmoke;
+        border-radius: 20px;
+           
+        
+        }
+    
+    .box .boton a, .box_992px .boton a, .box_tableview .boton a{
+        text-decoration: none;
+        color: black;
+           
+        
+        }
+    
+    .table{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 80px;
+        width: 100px;
+        text-decoration: none;
+        }
+
+    .table .numbers{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        text-decoration: none;
+        
+    }
+
+    .table .numbers li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        padding: 5px;
+
+    }
+
+}
+
+
+/*Version tablet*/
+@media (min-width: 577px ) and (max-width: 991px)  {
+    .box_992px{
+        display: none;
+    }
+    
+    
+    .grid_container{
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 80px calc(100vh - 230px) 70px;
+        grid-template-areas: 
+        "header header"
+        "nav main"
+        "nav main"
+        "footer footer";
+    
+
+         }
+
+    .grid_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+
+        }
+    
+
+    
+
+    .box, .box_tableview{
+        height: 400px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        border: solid 1px whitesmoke;
+        box-shadow:   
+            3px 3px whitesmoke,
+            2px 2px rgb(211, 208, 208);
+        
+    
+    }
+    
+    .box .imagen, .box_tableview .imagen{         
+        height: 40%;
+        width: 90%;
+        border: solid 1px black;
+        border-style: hidden;
+        
+    }
+    
+    .box .imagen img, .box_tableview .imagen img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;     
+        
+    }
+    
+    .box .description, .box_tableview .description{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 40%;
+        width: 100%;
+       
+    }
+    
+    .box .boton, .box_tableview .boton{ 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20%;
+        width: 50%;
+        background-color: whitesmoke;
+        border-radius: 20px;
+           
+        
+    }
+    
+    .box .boton a, .box_tableview .boton a{
+        text-decoration: none;
+        color: black;
+           
+        
+    }
+
+}
+/*Version mobile*/
+
+@media (max-width: 576px) {
+    .box_tableview {
+    display: none;
+    }
+
+    .box_992px{
     display: none;
     }
 
 
 }
+
+
+
+
+
 
 
 /*Footer*/
