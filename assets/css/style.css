@@ -4,16 +4,13 @@
     box-sizing: border-box;
 }
 
-body{
-   
-    
-}
+
 
 .grid_container{
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 80px calc(100vh - 260px) 80px;
+    grid-template-rows: 80px 80px calc(100vh - 230px) 70px;
     grid-template-areas: 
     "header"
     "nav"
